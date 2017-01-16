@@ -24,7 +24,7 @@ namespace Hello_Word
             }
 
 
-            //TURHAKOMMENTTI GIT-TESTIIN
+            //TURHAKOMMENTTI GIT-TESTIIN.
 
             //Console.WriteLine(i);
             string[] tyhjat = new string[kerros];
