@@ -14,14 +14,6 @@ namespace olio_ja_repository
             Console.WriteLine("Voi jumsjams");
             Console.WriteLine("Voi jumsjams");
 
-            Console.WriteLine("Voi jumsjams");
-
-            Console.WriteLine("Voi jumsjams");
-
-            Console.WriteLine("Voi jumsjams");
-
-
-
 
         }
     }
