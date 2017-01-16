@@ -12,6 +12,14 @@ namespace olio_ja_repository
         {
             Console.WriteLine("Hello GitHub!");
             Console.WriteLine("Voi jumsjams");
+            Console.WriteLine("Voi jumsjams");
+
+            Console.WriteLine("Voi jumsjams");
+
+            Console.WriteLine("Voi jumsjams");
+
+            Console.WriteLine("Voi jumsjams");
+
 
 
 
