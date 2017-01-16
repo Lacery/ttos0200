@@ -22,9 +22,7 @@ namespace Hello_Word
                     Console.Write(merkki);
                 Console.WriteLine();
             }
-
-
-            //TURHAKOMMENTTI GIT-TESTIIN.
+            
 
             //Console.WriteLine(i);
             string[] tyhjat = new string[kerros];
