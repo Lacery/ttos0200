@@ -60,7 +60,13 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vehicles.cs" />
+    <Compile Include="t2.cs" />
+    <Compile Include="t3.cs" />
+    <Compile Include="t1.cs" />
+    <Compile Include="t4.cs" />
+    <Compile Include="t5.cs" />
+    <Compile Include="t6.cs" />
+    <Compile Include="t7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
