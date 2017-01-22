@@ -1,5 +1,5 @@
 ﻿using System;
-using Televisioclassi;
+using Vehicles;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +13,15 @@ namespace Hello_Word
     {
         static void Main(string[] args)
         {
-            Televisio LG = new Televisio("LG", "Black", 45, "1920x1080");
+            Vehicle vehje = new Vehicle("Auto", 120, 4);
+            vehje.PrintData();
+            Console.WriteLine(vehje.ToString());
 
-            LG.PrintInfo();
-            LG.SwitchChannel();
-            LG.ChangeVolume(5);
 
-            Console.WriteLine();
+            Vehicle rekka = new Vehicle("rekka", 100, 6);
+            rekka.PrintData();
+            Console.WriteLine(rekka.ToString());
 
-            Televisio Samsung = new Televisio("Samsung", 6, 25);
-            Samsung.PrintInfo();
         }
     }
 
