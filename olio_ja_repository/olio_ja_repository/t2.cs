@@ -2,72 +2,90 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace olio_ja_repository
+
+
+
+namespace Hello_Word
 {
     class t2
     {
         public static void T2()
         {
-            int arvosana, maara;
-            Console.WriteLine("Montako arvosanaa syotat?");
-            maara = int.Parse(Console.ReadLine());
+            Pesukone samsung = new Pesukone("Samsung", 1972);
 
-            string[] nollat = new string[maara];
-            string[] ykkoset = new string[maara];
-            string[] kakkoset = new string[maara];
-            string[] kolmoset = new string[maara];
-            string[] neloset = new string[maara];
-            string[] vitoset = new string[maara];
-
-            for (int i = 0; i <= maara - 1; i++)
-            {
-                Console.WriteLine("\nAnna arvosana (0-5): ");
-                arvosana = int.Parse(Console.ReadLine());
-
-                switch (arvosana)
-                {
-                    case 0:
-                        nollat[i] += "*";
-                        break;
-                    case 1:
-                        ykkoset[i] += '*';
-                        break;
-                    case 2:
-                        kakkoset[i] += '*';
-                        break;
-                    case 3:
-                        kolmoset[i] += '*';
-                        break;
-                    case 4:
-                        neloset[i] += '*';
-                        break;
-                    case 5:
-                        vitoset[i] += '*';
-                        break;
-                    default:
-                        Console.WriteLine("Virheellinen numero");
-                        i--;
-                        break;
-
-                }
-            }
-            Console.Write("0: ");
-            nollat.ToList().ForEach(Console.Write);
-            Console.Write("\n1: ");
-            ykkoset.ToList().ForEach(Console.Write);
-            Console.Write("\n2: ");
-            kakkoset.ToList().ForEach(Console.Write);
-            Console.Write("\n3: ");
-            kolmoset.ToList().ForEach(Console.Write);
-            Console.Write("\n4: ");
-            neloset.ToList().ForEach(Console.Write);
-            Console.Write("\n5: ");
-            vitoset.ToList().ForEach(Console.Write);
-            Console.WriteLine("\n");
-
+            samsung.StateModel();
+            samsung.DryWash();
 
         }
     }
+
+
+    class Pesukone
+    {
+
+        //Fields
+
+
+        //Properties
+        public string Model = "Model has not been set";
+        public int Yearmodel;
+        public bool State;
+        public float Wash_time;
+        public float Temperature;
+
+
+        //Constructors
+        public Pesukone()
+        {
+        }
+
+        public Pesukone(string model)
+        {
+            Model = model;
+        }
+
+        public Pesukone(int yearmodel)
+        {
+            Yearmodel = yearmodel;
+        }
+
+        public Pesukone(string model, int yearmodel)
+        {
+            Model = model;
+            Yearmodel = yearmodel;
+        }
+
+
+        //Methods
+        public void StateModel()
+        {
+            Console.WriteLine("The model is " + Yearmodel + " " + Model);
+        }
+        public void DryWash()
+        {
+            Temperature = 60;
+            Wash_time = 80;
+            Console.WriteLine("Temperature is " + Temperature + "\nWash time is " + Wash_time);
+        }
+        public void NormalWash()
+        {
+            Temperature = 40;
+            Wash_time = 50;
+            Console.WriteLine("Temperature is " + Temperature + "\nWash time is " + Wash_time);
+        }
+        public void Power_on()
+        {
+            State = true;
+            Console.WriteLine("The state of the machine is " + State);
+        }
+        public void Power_off()
+        {
+            State = false;
+            Console.WriteLine("The state of the machine is " + State);
+        }
+
+    }
+
+
 }

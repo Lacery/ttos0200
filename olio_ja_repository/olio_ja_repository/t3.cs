@@ -2,41 +2,95 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace olio_ja_repository
+
+
+
+namespace Hello_Word
 {
     class t3
     {
         public static void T3()
         {
-            int kerros, valilyonnit, tahdet, i;
-            char merkki = '*';
-            Console.WriteLine("Kuinka korkea puu tehdaan?");
-            kerros = int.Parse(Console.ReadLine());
-            for (i = 1; i <= kerros - 2; i++) // Kerrosten määrä
-            {
-                for (valilyonnit = 1; valilyonnit <= (kerros - 2 - i); valilyonnit++)  // Välilyönnit jotta saadaan puun muoto
-                    Console.Write(" ");
-                for (tahdet = 1; tahdet <= i; tahdet++) //Vasen puoli ja "keskiosa"
-                    Console.Write(merkki);
-                for (tahdet = (i - 1); tahdet >= 1; tahdet--)  //Oikea puoli
-                    Console.Write(merkki);
-                Console.WriteLine();
-            }
-            string[] tyhjat = new string[kerros];
-            for (int h = 0; h <= i - 3; h++)  //Määrittää montako väliä tulee ennen "runkoa"
-            {
-                tyhjat[h] += " ";
-            }
-            for (int j = 1; j <= 2; j++) //Tulostaa rungon
-            {
-                for (int k = 0; k <= i - 2; k++) //Tulostaa välit runkoon asti
-                {
-                    Console.Write(tyhjat[k]);
-                }
-                Console.WriteLine("*");
-            }
+            Televisio LG = new Televisio("LG", "Black", 45, "1920x1080");
+
+            LG.PrintInfo();
+            LG.SwitchChannel();
+            LG.ChangeVolume(5);
+
+            Console.WriteLine();
+
+            Televisio Samsung = new Televisio("Samsung", 6, 25);
+            Samsung.PrintInfo();
         }
     }
+
+
+    class Televisio
+    {
+
+        //Fields
+
+
+        //Properties
+        public string Model = "Model has not been set";
+        public string Color;
+        public double Size;
+        public string Resolution;
+        public bool State;
+        public int Channel;
+        public int Volume;
+
+
+
+        //Constructors
+        public Televisio()
+        {
+        }
+
+        public Televisio(string model, string color, double size, string resolution)
+        {
+            Model = model;
+            Color = color;
+            Size = size;
+            Resolution = resolution;
+        }
+
+        public Televisio(string model, int channel, int volume)
+        {
+            Model = model;
+            Channel = channel;
+            Volume = volume;
+        }
+
+
+        //Methods
+        public void PrintInfo()
+        {
+            Console.WriteLine("Model: " + Model + "\nColor: " + Color + "\nSize: " + Size + "\"\nResolution: " + Resolution + "\nCurrent channel: " + Channel + "\nVolume: " + Volume);
+        }
+        public void SwitchOn()
+        {
+            State = true;
+        }
+        public void SwitchOff()
+        {
+            State = false;
+        }
+        public void SwitchChannel()
+        {
+            Console.WriteLine("Switch to which channel?");
+            Channel = int.Parse(Console.ReadLine());
+            Console.WriteLine("Channel is now " + Channel);
+        }
+        public void ChangeVolume(int volume)
+        {
+            Volume = volume;
+            Console.WriteLine("Volume is now " + Volume);
+        }
+
+
+    }
+
+
 }

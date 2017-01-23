@@ -65,7 +65,6 @@
     <Compile Include="t1.cs" />
     <Compile Include="t4.cs" />
     <Compile Include="t5.cs" />
-    <Compile Include="t6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
