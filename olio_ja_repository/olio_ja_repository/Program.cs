@@ -1,4 +1,29 @@
-﻿using System;
+﻿
+using System;
+using olio_ja_repository;
+namespace Hello_Word
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            t5 student = new t5(22, "Ville", "ICT", false);
+            t5.PrintInfo();
+
+            t5 student1 = new t5(53, "Markku", "-", true);
+            t5.PrintInfo();
+
+        }
+    }
+}
+
+
+
+
+
+/*
+using System;
 using olio_ja_repository;
 namespace Hello_Word
 {
@@ -23,3 +48,5 @@ namespace Hello_Word
         }
     }
 }
+
+*/
