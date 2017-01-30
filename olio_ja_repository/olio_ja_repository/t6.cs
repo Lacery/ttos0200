@@ -8,7 +8,7 @@ namespace olio_ja_repository
 {
     class t6
     {
-        public static void T5()
+        public static void T6()
         {
 
 

@@ -36,9 +36,9 @@ namespace olio_ja_repository
 
 
         //Properties
-        public string Name;
-        public string Job;
-        public int Salary;
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public int Salary { get; set; }
 
 
         //Constructors
@@ -53,27 +53,27 @@ namespace olio_ja_repository
 
         //Methods
 
-        public void PrintInfo()
+        public virtual void PrintInfo()
         {
             Console.WriteLine("Nimi: " + Name + "\nAmmattinimike: " + Job + "\nPalkka: " + Salary + "\n");
         }
 
-        public void ChangeName(string nimi)
+        public virtual void ChangeName(string nimi)
         {
             Name = nimi;
         }
-        public void ChangeJob(string job)
+        public virtual void ChangeJob(string job)
         {
             Job = job;
         }
-        public void ChangeSalary(int salary)
+        public virtual void ChangeSalary(int salary)
         {
             Salary = salary;
         }
 
     }
 
-    class Boss
+    class Boss : Employee
     {
 
 
@@ -83,37 +83,32 @@ namespace olio_ja_repository
 
 
         //Properties
-        public string Name;
-        public string Job;
-        public int Salary;
-        public string Car;
-        public int Bonus;
+        public string Car { get; set; }
+        public int Bonus { get; set; }
 
         //Constructors
         public Boss(string name, string job, int salary, string car, int bonus)
+            : base(name,job, salary)
         {
-            Name = name;
-            Job = job;
-            Salary = salary;
             Car = car;
             Bonus = bonus;
         }
 
         //Methods
 
-        public void PrintInfo()
+        public override void PrintInfo()
         {
             Console.WriteLine("Nimi: " + Name + "\nAmmattinimike: " + Job + "\nPalkka: " + Salary + "\nAuto : " + Car + "\nBonus: " + Bonus + "\n");
         }
-        public void ChangeName(string nimi)
+        public override void ChangeName(string nimi)
         {
             Name = nimi;
         }
-        public void ChangeJob(string job)
+        public override void ChangeJob(string job)
         {
             Job = job;
         }
-        public void ChangeSalary(int salary)
+        public override void ChangeSalary(int salary)
         {
             Salary = salary;
         }
