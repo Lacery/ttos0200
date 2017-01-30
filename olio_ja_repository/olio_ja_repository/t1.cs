@@ -1,34 +1,71 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+
 
 namespace olio_ja_repository
 {
-
-    public class t1
+    class t1
     {
         public static void T1()
         {
-            int[] luvut = new int[5];
-            int yhteensa;
+            Hissi yksi = new Hissi();
 
-            for (int i = 0; i <= 4; i++)
-            {
-
-                Console.WriteLine("Anna pisteet: ");
-                luvut[i] = int.Parse(Console.ReadLine());
-            }
-
-            Console.WriteLine("Pienin pistemaara: " + luvut.Min());
-            Console.WriteLine("Suurin pistemaara: " + luvut.Max());
-
-            int sum = luvut.Sum();
-
-            yhteensa = sum - luvut.Min() - luvut.Max();
-            Console.WriteLine("Kokonaispisteet: " + yhteensa);
-
+            int muuttuja;
+            Console.WriteLine("Anna kerros");
+            muuttuja = int.Parse(Console.ReadLine());
+            yksi.SwitchFloor(muuttuja);
+            yksi.PrintFloor();
 
         }
     }
+
+
+    class Hissi
+    {
+
+        //Fields
+        private readonly int MaxKerros = 5;
+        private readonly int MinKerros = 1;
+
+        //Properties
+        private int kerros;
+        public int Kerros
+        {
+            get
+            {
+                return kerros;
+            }
+            set
+            {
+
+                if (value <= MaxKerros && value >= MinKerros) { kerros = value; }
+                else { Console.WriteLine("Virheellinen kerros"); kerros = MinKerros; }
+            }
+        }
+
+
+
+        //Constructors
+        public Hissi()
+        {
+        }
+
+
+
+
+        //Methods
+        public void PrintFloor()
+        {
+            Console.WriteLine("Tamanhetkinen kerros on " + kerros);
+        }
+        public void SwitchFloor(int kerros)
+        {
+            Kerros = kerros;
+            Console.WriteLine("Mennaan kerrokseen " + Kerros);
+        }
+
+
+    }
+
+
 }
