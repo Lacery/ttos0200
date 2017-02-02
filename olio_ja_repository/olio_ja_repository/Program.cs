@@ -19,7 +19,7 @@ namespace Hello_Word
                 case 4: t4.T4(); break;
                 case 5: t5.T5(); break;
                 case 6: t6.T6(); break;
-                //Testikommentti Discord Webhookkia varten
+                //Testikommentti Discord Webhookkia varten.
             }
         }
     }
