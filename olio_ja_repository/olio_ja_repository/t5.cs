@@ -15,6 +15,11 @@ namespace olio_ja_repository
             Radio radio = new Radio(1, 20550.5, false);
             radio.PrintInfo();
             radio.SwitchPower();
+
+            Radio radio2 = new Radio(5, 255000, true);
+            radio2.PrintInfo();
+            radio2.SwitchPower();
+
         }
     }
 
@@ -34,7 +39,7 @@ namespace olio_ja_repository
             get { return MinVolume; }
 
             set {
-                if (value > MaxVolume || value < MinVolume) { Console.WriteLine("Invalid volume. Set to " + MinVolume); volume = MinVolume; }
+                if (value > MaxVolume || value < MinVolume) { Console.WriteLine("Invalid volume. Set to minimum volume " + MinVolume); volume = MinVolume; }
                 else { volume = value;  }
                 }
         }
@@ -43,7 +48,7 @@ namespace olio_ja_repository
             get { return MinFreq; }
             set
             {
-                if (value > MaxFreq || value < MinFreq) { Console.WriteLine("Invalid frequency. Set to " + MinFreq); freq = MinFreq; }
+                if (value > MaxFreq || value < MinFreq) { Console.WriteLine("Invalid frequency. Set to minimum frequency " + MinFreq); freq = MinFreq; }
                 else { freq = value;  }
             }
         }
@@ -64,8 +69,8 @@ namespace olio_ja_repository
         }
         public void SwitchPower()
         {
-            if (Power == true) { Console.WriteLine("Power is on"); }
-            else { Console.WriteLine("Power is off"); }
+            if (Power == true) { Console.WriteLine("Power is on\n"); }
+            else { Console.WriteLine("Power is off\n"); }
         }
 
     }

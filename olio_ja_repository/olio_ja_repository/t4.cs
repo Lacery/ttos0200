@@ -12,7 +12,7 @@ namespace olio_ja_repository
         {
             Vehicle Auto1 = new Vehicle("Nissan", "Micra", 1998, "Punainen");
             Vehicle Laiva = new Boat("Viking Line", "Baltic Queen", 1995, "Valkoinen", "Valtamerilaiva", 20000);
-            Bike bike = new Bike("Helkama", "Tango", 2005, "Musta", true, "Vaihdesetti");
+            Vehicle bike = new Bike("Helkama", "Tango", 2005, "Musta", true, "Vaihdesetti");
 
             Console.WriteLine(Auto1.ToString());
             Console.WriteLine(bike.ToString());
