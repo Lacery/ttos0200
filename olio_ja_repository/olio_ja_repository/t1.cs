@@ -12,7 +12,7 @@ namespace olio_ja_repository
         {
             Persons Ville = new Persons("Ville", 23, "160494-119M");
 
-
+            //Fugfugfugfug
             Ville.AddPerson("Ville", 23, "1601431-123M");
             Console.WriteLine(Ville.PrintData());
 
