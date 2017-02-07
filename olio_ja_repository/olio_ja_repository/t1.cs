@@ -10,11 +10,15 @@ namespace olio_ja_repository
     {
         public static void T1()
         {
-            Persons Ville = new Persons("Ville", 23, "160494-119M");
 
-            //Fugfugfugfug
-            Ville.AddPerson("Ville", 23, "1601431-123M");
-            Console.WriteLine(Ville.PrintData());
+            Persons Ville = new Persons();
+            Persons Pekka = new olio_ja_repository.Persons();
+
+            Pekka.AddPerson("Pekka", "Lahtinen", "12345134");
+            Pekka.PrintData();
+
+            Ville.AddPerson("Ville", "Halminen", "160494-1234");
+            Ville.PrintData();
 
 
         }
@@ -22,71 +26,26 @@ namespace olio_ja_repository
 
     class Person
     {
-        //Person-luokka yksittäisen henkilön tietojen ylläpitämiseen ja tulostamiseen
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string HeTu { get; set; }
-
-        public Person()
-        {
-
-        }
-
-        public Person(string name, int age, string hetu)
-        {
-            Name = name;
-            Age = age;
-            HeTu = hetu;
-        }
-
-
-
-        public virtual string PrintData()
-        {
-            return "ss";
-        }
-
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string SocialSecurityNumber { get; set; }
+        
     }
 
 
     class Persons : Person
     {
         //List-kokoelma yksittäisille henkilöille -> 
-        public List<Person> Lista { get; set; }
+        List<Person> persons = new List<Person>();
 
-        public Persons(string name, int age, string hetu):base(name,age,hetu)
-        {
-        }
-
-
-
-        public void AddPerson(string name, int age, string hetu)
-        {
-            //Lisätään henkilö Listaan
-            Lista.Add(new Person { Name = name, Age = age, HeTu = hetu });
-        }
-
-        public void GetPerson()
-        {
-            //Haetaan henkilö listan alkion indeksillä
-
-        }
-
-        public void FindPerson()
-        {
-            //Haetaan henkilö Listasta hetu:lla
-
-        }
-
-
-        public override string PrintData()
+        public void AddPerson(string firstname, string lastname, string ssn) 
         {
 
-            //Tulostetaan kaikki Listan henkilöt 
-
-            return Lista[0].Name + " " + Lista[0].Age + " " + Lista[0].HeTu;
+            persons.Add(new Person { Firstname = firstname, Lastname = lastname, SocialSecurityNumber = ssn });
 
         }
+        
+
 
     }
 
