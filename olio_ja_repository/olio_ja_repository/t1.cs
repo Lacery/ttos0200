@@ -12,15 +12,9 @@ namespace olio_ja_repository
         {
 
             Persons Ville = new Persons();
-            Persons Pekka = new olio_ja_repository.Persons();
 
-            Pekka.AddPerson("Pekka", "Lahtinen", "12345134");
-            Pekka.PrintData();
-
-            Ville.AddPerson("Ville", "Halminen", "160494-1234");
+            Ville.AddPerson("Ville", "Halminen", "160494-119M");
             Ville.PrintData();
-
-
         }
     }
 
@@ -29,7 +23,9 @@ namespace olio_ja_repository
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string SocialSecurityNumber { get; set; }
+
         
+
     }
 
 
@@ -38,13 +34,20 @@ namespace olio_ja_repository
         //List-kokoelma yksittäisille henkilöille -> 
         List<Person> persons = new List<Person>();
 
-        public void AddPerson(string firstname, string lastname, string ssn) 
+        public void AddPerson(string firstname, string lastname, string ssn)
         {
 
             persons.Add(new Person { Firstname = firstname, Lastname = lastname, SocialSecurityNumber = ssn });
 
         }
-        
+
+        public void PrintData()
+        {
+            foreach (Person person in persons)
+            {
+                Console.WriteLine(person.ToString());
+            }
+        }
 
 
     }
