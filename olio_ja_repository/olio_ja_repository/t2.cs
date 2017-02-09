@@ -11,8 +11,7 @@ namespace olio_ja_repository
         public static void T2()
         {
 
-            CD cd = new CD("Rammstein", 18.99, "Du Hast", 4.32);
-
+            CD cd = new CD("Rammstein", 18.99, "Du hast", 4.32);
             Console.WriteLine(cd.ToString());
 
             cd.PrintSongs();
@@ -36,6 +35,10 @@ namespace olio_ja_repository
             songs.Add(new Song { Name = songname, Length = songlength });
         }
 
+        public void AddCD() //Tällä?
+        {
+
+        }
 
         public override string ToString()
         {

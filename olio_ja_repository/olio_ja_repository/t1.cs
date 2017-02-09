@@ -69,7 +69,7 @@ namespace olio_ja_repository
         {
             foreach (Person person in persons)
             {
-                Console.WriteLine(person.ToString());
+                Console.WriteLine(person.ToString()); //Käyttää yliohjelma ToString-metodia
             }
         }
 

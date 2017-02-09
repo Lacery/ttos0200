@@ -15,8 +15,8 @@ namespace Hello_Word
                 default: Console.WriteLine("Ei kelvollinen tehtävänumero. Sammutetaan."); break;
                 case 1: t1.T1(); break;
                 case 2: t2.T2(); break;
-                /* Voi jukupätkä
                 case 3: t3.T3(); break;
+                /* Voi jukupätkä
                 case 4: t4.T4(); break;
                 case 5: t5.T5(); break;
                 case 6: t6.T6(); break;
