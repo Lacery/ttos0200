@@ -1,3 +1,4 @@
 # ttos0200
 Olio-ohjelmointi
-Mr O:n ja Mr V:n hurjan huikeat olio-ohjelmointi rojektit
+C# -harjoituksia olio-ohjelmoinnin kurssille.
+Harjoitukset tallennettu eri brancheihin.
